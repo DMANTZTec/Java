@@ -1,0 +1,6 @@
+import mysql.connector#mydb = mysql.connector.connect(host="localhost",  #user="yourusername", password="yourpassword",database="YourDBName")MyDb=mysql.connector.connect(host="localhost",                          user="root",                          password='root')
+MyCursor=MyDb.cursor()
+MyCursor.execute('show databases')
+for data in MyCursor:    
+   print(data)
+print("MySQLServerConnectedSuccessfully..!!")
