@@ -1,0 +1,17 @@
+.image{
+    background-image: url("C:/Users/admin/Downloads/tower.jpeg");
+    height: 100vh;
+    background-size: cover;
+}
+.heading{
+    color: white;
+    font-size: 28px;
+    font-family: 'Roboto';
+    font-weight: bold;
+    padding: 20px;
+
+}
+.favourite-place-heading{
+    border-color: white;
+    border-radius: 25px;
+}
