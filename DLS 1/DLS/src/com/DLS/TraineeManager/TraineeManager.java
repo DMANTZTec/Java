@@ -53,3 +53,12 @@ public class TraineeManager {
 
 }
 
+/*output 
+add trainee name 
+swapna
+Enter the course
+java
+update the traineename
+Amulya
+Successfully updated
+*/
