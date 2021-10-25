@@ -10,7 +10,7 @@ public class CourseManager {
 	private List<Course> course=new ArrayList();//as of now saving in list,database not available
 	public void addCourse(Course course) {
 		//add to the database
-		this.course.add(course.getCourseId(),course);
+		this.course.add(course);
 	}
 	public void deleteCourse(Course course)
 	{

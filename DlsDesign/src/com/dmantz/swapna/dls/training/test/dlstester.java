@@ -1,9 +1,12 @@
 package com.dmantz.swapna.dls.training.test;
 import com.dmantz.swapna.dls.training.common.*;
+import com.dmantz.swapna.dls.training.common.Module;
 import com.dmantz.swapna.dls.training.managers.CourseManager;
 import com.dmantz.swapna.dls.training.managers.TraineeManager;
+import com.dmantz.swapna.dls.training.managers.Worklog;
 
 import java.util.ArrayList;
+import java.util.ListIterator;
 
 public class dlstester {
 
@@ -34,7 +37,9 @@ public class dlstester {
         coursemanager.addCourse(testcourse1);
         System.out.println(coursemanager.getCourseCount());
         coursemanager.deleteCourse(testcourse);
+        System.out.println(coursemanager.getCourseCount());
         coursemanager.addCourse(testcourse1);
+        System.out.println(coursemanager.getCourseCount());
         coursemanager.searchCourse(testcourse);
         coursemanager.updateCourse(testcourse);
        
@@ -44,23 +49,33 @@ public class dlstester {
         module.setModuleName("JDBC");
         module1.setModuleId(2);
         module1.setModuleName("MultiThreading");
+        
         ArrayList<Module> mods=new ArrayList();
         mods.add(module);
         mods.add(module1);
+       // for(Module mod)
         
         
         Topic topic=new Topic();
         Topic topic1=new Topic();
         topic.setTopicId(1);
         topic.setTopicName("Drivers");
-        topic.setTopicId(2);
-        topic.setTopicName("Statements");
+        topic1.setTopicId(2);
+        topic1.setTopicName("Statements");
+        topic1.setTopicDescription("To send queiries from java application to the database and to bring the result from database to the java application");
+        System.out.println("TopicId-->"+topic1.getTopicId()+"  TopicName-->"+topic1.getTopicName()+"  TopicDescription--> "+topic1.getTopicDescription());
+       
         ArrayList<Topic> topics=new ArrayList();
         topics.add(topic);
         topics.add(topic1);
-        topic1.setTopicDescription("To send queiries from java application to the database and to bring the result from database to the java application");
-        System.out.println("TopicId-->"+topic.getTopicId()+"  TopicName-->"+topic.getTopicName()+"  TopicDescription--> "+topic.getTopicDescription());
-	    
+        for(Topic topi: topics)
+        {
+        	System.out.println(topi.getTopicId()+topi.getTopicName()+topi.getTopicDescription());
+
+            
+        	
+        }
+
         Trainee trainee=new Trainee();
         Trainee trainee1=new Trainee();
         Trainee trainee2=new Trainee();
@@ -80,10 +95,24 @@ public class dlstester {
        traineemanager.addTrainee(trainee1);
        traineemanager.addTrainee(trainee2);
        traineemanager.addTrainee(trainee3);
+       System.out.println(traineemanager.getTraineeCount());
        traineemanager.deleteTrainee(trainee);
+       System.out.println(traineemanager.getTraineeCount());
        traineemanager.searchTrainee(trainee1);
        traineemanager.reviewTrainee(trainee2);
        traineemanager.updateTrainee(trainee);
+       
+       
+       Worklog worklog=new Worklog();
+       worklog.setTrainee(trainee1);
+       worklog.setCourse(testcourse1);
+       worklog.setModule(null);
+       worklog.setTopic(topic1);
+       worklog.setTaskId(null);
+       worklog.setStatus(null);
+       worklog.setStartDate(null);
+       worklog.setEndDate(null);
+       System.out.println(worklog.getTrainee());
 	           
 	
 	}

@@ -8,7 +8,7 @@ public class Course {
 	private int courseId;
 	private String courseName;
 	private String createdBy;
-	private String CreateDate;
+	private String createDate;
 	private String recommendedDuration;
 	private String courseProvider;
 	private ArrayList<Module> modules;
