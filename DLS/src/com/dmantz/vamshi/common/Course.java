@@ -6,7 +6,7 @@ import java.util.Date;
 public class Course {
 	private int courseId;
 	private String courseName;
-	private Date createdBy;
+	
 	private String courseProvider;
 	private ArrayList<Module> modules;
 	public int getCourseId() {
@@ -21,12 +21,7 @@ public class Course {
 	public void setCourseName(String courseName) {
 		this.courseName = courseName;
 	}
-	public Date getCreatedBy() {
-		return createdBy;
-	}
-	public void setCreatedBy(Date createdBy) {
-		this.createdBy = createdBy;
-	}
+
 	public String getCourseProvider() {
 		return courseProvider;
 	}
