@@ -1,6 +1,7 @@
 package com.dmantz.swapna.dls.training.common;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 
 
@@ -8,7 +9,7 @@ public class Course {
 	private int courseId;
 	private String courseName;
 	private String createdBy;
-	private String createDate;
+	private Date createdDate;
 	private String recommendedDuration;
 	private String courseProvider;
 	private ArrayList<Module> modules;
@@ -31,12 +32,7 @@ public class Course {
 	public void setCreatedBy(String createdBy) {
 		this.createdBy = createdBy;
 	}
-	public String getCreateDate() {
-		return CreateDate;
-	}
-	public void setCreateDate(String createDate) {
-		CreateDate = createDate;
-	}
+	
 	public String getRecommendedDuration() {
 		return recommendedDuration;
 	}
@@ -48,6 +44,12 @@ public class Course {
 	}
 	public void setCourseProvider(String courseProvider) {
 		this.courseProvider = courseProvider;
+	}
+	public String getCreatedDate() {
+		return createdDate;
+	}
+	public void setCreatedDate(String createdDate) {
+		this.createdDate = createdDate;
 	}
 	
 	

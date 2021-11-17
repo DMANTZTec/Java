@@ -4,7 +4,14 @@ public class Trainee {
 
 	private int traineeId;
 	private String traineeName;
+	private String traineeeAddress;
 	
+	public String getTraineeeAddress() {
+		return traineeeAddress;
+	}
+	public void setTraineeeAddress(String traineeeAddress) {
+		this.traineeeAddress = traineeeAddress;
+	}
 	public int getTraineeId() {
 		return traineeId;
 	}
