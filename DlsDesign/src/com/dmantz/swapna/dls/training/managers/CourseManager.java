@@ -63,7 +63,7 @@ public class CourseManager {
 	    Connection con=this.getConnection();
 		String query=null;
 		Statement st=con.createStatement();
-		query=String.format("insert into module values('%d','%s',%d,%d)",moduleId,moduleName,moduleIndex,courseId);
+		query=String.format("insert into module values(%d,'%s',%d,%d)",moduleId,moduleName,moduleIndex,courseId);
 		int count=st.executeUpdate(query);
 		System.out.println(count +"row/s affected");
 		st.close();
@@ -80,10 +80,9 @@ public class CourseManager {
 		Connection con=this.getConnection();
 		String query=null;
 		Statement st=con.createStatement();
-		query=String.format("insert into topic values('%d','%s','%s',%d,%d)",topicId,topicName,topicDescription,topicIndex,moduleId);
+		query=String.format("insert into topic values(%d,'%s','%s',%d,%d)",topicId,topicName,topicDescription,topicIndex,moduleId);
 		int count=st.executeUpdate(query);
 		System.out.println(count +"row/s affected");
-		System.out.println("topic added successfully"); 
 		st.close();
 		con.close();
 		}catch(Exception e) { System.out.println(e);}

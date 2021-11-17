@@ -23,9 +23,9 @@ public class dlstester {
 		//coursemanager.deleteTopic(1);
 		//coursemanager.deleteModule(1);
 		//coursemanager.deleteCourse(4);
-		coursemanager.addTopic(1, "if statement", "jdakfadjlfgadjlgks",1,1);
+		coursemanager.addTopic(0, "if statement", "jdakfadjlfgadjlgks",1,1);
 		
-		coursemanager.addModule(17 ,"Css Building Blocks",2,7);
+		coursemanager.addModule(0 ,"Css Building Blocks",2,7);
 		
 		coursemanager.viewCourseDetails();
        //coursemanager.addCourse(10,"Tableau","Pat Hanrahan,Christian chatbot"," ","30 hours","Udemy");
