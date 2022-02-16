@@ -34,7 +34,7 @@ public class Supervisor {
 	
 	public void viewCourseProgress(int courseId) throws Exception {
 		Connection con = this.getConnection();
-		String query=String.format("select from worklog where courseId=%d",courseId);
+		String query=String.format("select from worklog where course_id=%d",courseId);
 		Class.forName("com.mysql.cj.jdbc.Driver");//loading and register the driver using forName method
 		Statement st=con.createStatement(); //creating statement by using connection interface
 		ResultSet rs=st.executeQuery(query);//executes the query and stores in result set object

@@ -34,7 +34,7 @@ public class Director {
 	
     public void removeTrainee(int traineeId) throws Exception {
     	Connection con = this.getConnection();
-		String q = String.format("delete from trainee where traineeId=%d",traineeId);
+		String q = String.format("delete from trainee where trainee_id=%d",traineeId);
 		Class.forName("com.mysql.cj.jdbc.Driver"); //load and register
 		Statement st= con.createStatement();
 	    int count =st.executeUpdate(q); 

@@ -45,7 +45,7 @@ public class Trainee {
 	
 	public void viewAssignedCourses(int traineeId) throws Exception {
 		Connection con = this.getConnection();
-		String query =String.format("select*from trainee_course where traineeId=%d",traineeId); 
+		String query =String.format("select*from trainee_course where trainee_id=%d",traineeId); 
 		Class.forName("com.mysql.cj.jdbc.Driver"); //load and register
 		Statement st= con.createStatement();
 		ResultSet rs=st.executeQuery(query); 
@@ -94,7 +94,7 @@ public class Trainee {
 	public void viewOtherTraineeProgress(int traineeId) throws Exception
 	{
 		Connection con = this.getConnection();
-	    String query=String.format("select*from worklog where traineeId=%d",traineeId );
+	    String query=String.format("select*from worklog where trainee_id=%d",traineeId );
         Statement st=con.createStatement(); 
 		ResultSet rs=st.executeQuery(query);
 		while(rs.next()) 	

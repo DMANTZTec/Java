@@ -39,7 +39,7 @@ public class CourseManager {
 	public void updateCourse()	throws Exception{
 		//update course in database
 		Connection con = this.getConnection();
-		String q1 ="update course set courseName='JAVA' where courseId=1"; 
+		String q1 ="update course set courseName='JAVA' where course_id=1"; 
 		Class.forName("com.mysql.cj.jdbc.Driver"); //load and register
 		Statement st= con.createStatement();
 	    int count1 =st.executeUpdate(q1); 
@@ -52,7 +52,7 @@ public class CourseManager {
 	public void deleteCourse(int courseId) throws Exception {
 		//Delete course in database
 		Connection con = this.getConnection();
-		String q1 =String.format("delete from course where courseId=%d",courseId); 
+		String q1 =String.format("delete from course where course_id=%d",courseId); 
 		Class.forName("com.mysql.cj.jdbc.Driver"); 
 		Statement st= con.createStatement();
 	    int count1 =st.executeUpdate(q1); 
@@ -87,7 +87,7 @@ public class CourseManager {
 	
 	public void addModule(int moduleId,String moduleName,int courseId) throws Exception {
 		Connection con = this.getConnection();
-		String q1 =String.format("insert into module values(%d,'%s',%d)", moduleId,moduleName,courseId); 
+		String q1 =String.format("insert into module (%d,'%s',%d)", moduleId,moduleName,courseId); 
 		Class.forName("com.mysql.cj.jdbc.Driver"); 
 		Statement st= con.createStatement();
 	    int count1 =st.executeUpdate(q1); 
