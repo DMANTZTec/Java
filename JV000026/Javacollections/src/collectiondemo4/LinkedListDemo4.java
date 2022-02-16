@@ -1,7 +1,9 @@
-package collectiondemo2;
+package collectiondemo4;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.LinkedList;
+
 
 class Student {
 	int studentId;
@@ -18,12 +20,13 @@ class Student {
 
 }
 
-public class ArrayList4 {
+
+class LinkedListDemo4 {
 	public static void main(String[] args) {
 		Student s1 = new Student(1, "vamshi", 22, "nalgonda");
 		Student s2 = new Student(2, "kiran", 23, "nalgonda");
 		Student s3 = new Student(3, "raji", 23, "nalgonda");
-		ArrayList<Student> al = new ArrayList();
+		LinkedList<Student> al = new LinkedList();
 		al.add(s1);
 		al.add(s3);
 		al.add(s2);
@@ -37,11 +40,10 @@ public class ArrayList4 {
 		for (Student st : al) {
 			System.out.println(st.studentId + " " + st.studentName + " " + st.age + " " + st.Adress);
 		}
-		// using for loop
-		for (int i = 0; i < al.size(); i++) {
-			System.out.println(al.get(i));
-		}
-
+	
 	}
+
+		
+	
 
 }
