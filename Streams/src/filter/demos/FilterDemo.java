@@ -26,7 +26,7 @@ public class FilterDemo {
 	evenNumbersList=numberList.stream().filter(n->n%2==0).collect(Collectors.toList());
 	System.out.println(evenNumbersList);
 	
-	// numberList.stream().filter(n->n%2==0).forEach(n->System.out.println(n));
+	numberList.stream().filter(n->n%2==0).forEach(n->System.out.println(n));
 	
 }
 }
