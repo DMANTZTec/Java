@@ -1,0 +1,34 @@
+package files;
+
+import java.io.File;
+import java.io.IOException;
+
+public class FilesDemo {
+	
+	public static void createFile(String filePath) {
+		File myfile=new File(filePath);
+		try {
+			if(myfile.createNewFile()) {
+				System.out.println("File is created "+ filePath);
+			}
+			else {
+				System.out.println("File is already  Exist");
+			}
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+	
+	
+	
+	
+	
+	public static void main(String[] args) {
+		String filePath="c\\FilesProgram";
+		createFile(filePath);
+		
+	}
+
+}

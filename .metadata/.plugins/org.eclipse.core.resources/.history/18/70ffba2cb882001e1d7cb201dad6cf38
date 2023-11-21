@@ -1,0 +1,80 @@
+package files;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Scanner;
+
+public class FilesDemo {
+	// create file
+	public static void createFile(String filePath) {
+		File myfile = new File(filePath);
+		try {
+			if (myfile.createNewFile()) {
+				System.out.println("File is created " + filePath);
+			} else {
+				System.out.println("File is already  Exist");
+			}
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+	// write in file
+
+	public static void fileWrite(String filePath) {
+		FileWriter mywriter;
+		try {
+			mywriter = new FileWriter(filePath);
+
+			mywriter.write("Welcome to my file.... ");
+			mywriter.close();
+			System.out.println("successfully wrote in file");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	// Read file
+	public static void readFile(String filePath) {
+		 
+		try {
+			File myfile=new File(filePath);
+
+			Scanner	sc = new Scanner(myfile);
+		
+		 while(sc.hasNextLine()) {
+			 String data=sc.nextLine();
+			 System.out.println(data);
+		 }
+		 sc.close();
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	// Rename File
+	
+	public static void renameFile(String oldPath,String newPath) {
+		File old=new File(oldPath);
+		File newpath=new File(newPath);
+		
+		if (old.renameTo(newpath)) {
+			System.out.println("File is Renamed "+newpath);
+		}
+	}
+
+	public static void main(String[] args) {
+		String filePath = "C:\\FilesProgram\\Myfile.txt" ;
+		String renamepath="C:\\FilesProgram\\Myfile1.txt" ;
+		//createFile(filePath);
+	//	fileWrite(filePath);
+		//readFile(filePath);
+		renameFile(filePath,renamepath);
+
+	}
+
+}

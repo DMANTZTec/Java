@@ -1,0 +1,46 @@
+package inheritance;
+
+public class Employee {
+	private int id;
+	private String name;
+	private int basicSalary;
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getBasicSalary() {
+		return basicSalary;
+	}
+
+	public void setBasicSalary(int basicSalary) {
+		this.basicSalary = basicSalary;
+	}
+
+	public Employee(int id, String name, int basicSalary) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.basicSalary = basicSalary;
+	}
+
+	public void detailsOfEmployee() {
+		System.out.println(getId());
+		System.out.println(getName());
+		System.out.println(getBasicSalary());
+
+	}
+
+}

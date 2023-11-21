@@ -1,0 +1,18 @@
+package inheritance;
+
+public class Developer extends Employee{
+
+	public Developer(int id, String name, int basicSalary) {
+		super(id, name, basicSalary);
+		
+	}
+	
+	public void technology() {
+		System.out.println("JAVA DEVELOPER");
+	}
+	public void totalSalary() {
+		System.out.println(getBasicSalary()*0.1);
+	}
+	
+
+}

@@ -1,0 +1,33 @@
+package files;
+
+import java.io.File;
+
+public class CreateFolder {
+
+	
+		
+		public static void CreatingFolder(String folderPath) {
+			File folder=new File(folderPath);
+			if(!folder.exists()) {
+				folder.mkdir();
+				System.out.println("created folder : "+ folderPath);
+			}
+			
+		}
+		public static boolean checkFolderExists(String folderPath) {
+			File folder=new File(folderPath);
+			return folder.exists();
+			
+		}
+		
+		public static void main(String[] args) {
+		String	folderPath="C:\\FilesProgramFile";
+		
+		CreatingFolder(folderPath);
+		boolean b=checkFolderExists(folderPath);
+		System.out.println(b);
+		
+
+	}
+
+}

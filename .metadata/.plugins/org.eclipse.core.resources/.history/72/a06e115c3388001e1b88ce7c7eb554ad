@@ -1,0 +1,32 @@
+package inheritance;
+
+public class Company {
+	public static void main(String[] args) {
+//		TeamLead TL= new TeamLead();
+//		TL.detailsOfEmployee();
+//		TL.totalSalary();
+//		TL.TLRoll();
+//		
+//		Developer dvlp=new Developer();
+//		dvlp.detailsOfEmployee();
+//		dvlp.totalSalary();
+//		dvlp.technology();
+		Employee emp= new Employee();
+		emp.setBasicSalary(1000);
+		emp.setId(1);
+		emp.setName("Rakesh");
+		
+		System.out.println(emp.getId()+" "+emp.getName()+" "+ emp.getBasicSalary());
+		System.out.println(emp.totalSalary());
+		
+		Developer dev=new Developer();
+		dev.setBasicSalary(3000);
+		dev.setId(005);
+		dev.setName("Shanthi");
+		dev.setProgrammingLanguage("java");
+		
+		System.out.println(dev.getId()+" "+dev.getName()+" "+ dev.getBasicSalary()+" "+ dev.getProgrammingLanguage());
+		System.out.println("Total salary " +dev.totalSalary());
+	}
+
+}
