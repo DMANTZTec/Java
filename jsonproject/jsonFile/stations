@@ -1,0 +1,36 @@
+{
+
+    "TrainName": "ChennaiExpress",
+    "TrainNumber": 6752,
+    
+    "station" : [
+        {
+            "stationName" : "kachiGuda",
+            "stationCode" : "KCG",
+            "city" : "HyderaBad",
+            "platforms" : "10"
+
+    },
+    {
+        "stationName" : "secunDerabad",
+        "stationCode" : "SCB",
+        "city" : "HyderaBad",
+        "platforms" : "20"
+
+},  
+{
+    "stationName" : "NalGonda",
+    "stationCode" : "NLG",
+    "city" : "NalGonda",
+    "platforms" : "2"
+
+}, 
+{
+    "stationName" : "MiryalaGuda",
+    "stationCode" : "MLG",
+    "city" : "MiryalaGuda",
+    "platforms" : "3"
+
+}
+    ]
+}
