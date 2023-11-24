@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="C:\Users\rakes\git\repository4\jsonproject"/>
 			<item value="C:\MyDmantzcode"/>
 			<item value="C:\MyDmantzcode\corejavaproject"/>
 		</list>
@@ -27,13 +28,13 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
-			<item value="jsonproject.jsonproject"/>
+			<item value="jdbc.jdbcDemo"/>
 		</list>
 		<list key="groupId">
-			<item value="jsonproject"/>
+			<item value="jdbc"/>
 		</list>
 		<list key="artifactId">
-			<item value="jsonproject"/>
+			<item value="jdbcDemo"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
